@@ -37,7 +37,6 @@
 }
 .slider:hover {
     opacity: 1;
-    box-shadow: 0px 0px 5px red;
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -64,7 +63,7 @@
 @media only screen and (min-width: 400px) and (max-width: 600px) {
     #drum-machine {
         width: 350px;
-        height: 270px;
+        height: 300px;
         top: 100px;
         padding: 20px;
     }
@@ -72,7 +71,7 @@
         width: 50px;
         height: 210px;
         left: 40px;
-        top: 45px;
+        top: 53px;
     }
     #vol-display {
         height: 30px;
@@ -80,12 +79,16 @@
         padding-top: 4px;
     }
     #vol-range {
-        width: 150px;
-        left: -50px;
-        top: 110px;
+        width: 170px;
+        left: -59px;
+        top: 126px;
     }
     .slider {
         height: 15px;
+        box-shadow: 0px 0px 5px black;
+    }
+    .slider:hover {
+        box-shadow: 0px 0px 3px 1px red;
     }
     .slider::-webkit-slider-thumb {
         width: 20px;
@@ -103,15 +106,16 @@
         width: 100px;
         height: 20px;
         margin: 10px;
-        top: 35px;
+        top: 43px;
         height: 30px;
-        left: 150px;
+        left: 155px;
+        padding-top: 4px;
     }
     .drums {
         padding: 10px;
         width: 200px;
-        height: 190px;
-        top: 75px;
+        height: 195px;
+        top: 89px;
         right: 40px;
     }
     .drum-pad {
