@@ -1,11 +1,17 @@
 * {
     box-sizing: border-box;
 }
-
 :root {
     --gray: rgb(103, 103, 103);
+    --neon-blue: rgb(115, 0, 255);
+    --neon-mint: rgb(0, 255, 217);
+    --neon-yellow: rgb(255, 225, 0);
 }
-
+#background {
+    background: black;
+    width: 100%;
+    height: 100vh;
+}
 #drum-machine {
     background-color: black;
     position: relative;
@@ -14,6 +20,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: black;
 
     width: 350px;
     height: 300px;
@@ -21,6 +28,16 @@
     padding: 20px;
     border-radius: 5px;
     border: 7px ridge var(--gray);
+}
+#drum-machine:hover {
+    animation: shadow 7s linear infinite;
+}
+@keyframes shadow {
+    0% {box-shadow: 0px 0px 15px 7px red}
+    25% {box-shadow: 0px 0px 10px 7px var(--neon-blue)}
+    50% {box-shadow: 0px 0px 15px 7px var(--neon-mint)}
+    75% {box-shadow: 0px 0px 10px 7px var(--neon-yellow)}
+    100% {box-shadow: 0px 0px 15px 7px rgb(255, 128, 0)}
 }
 #logo {
     font-family: 'Brush Script Std';
@@ -34,7 +51,6 @@
     font-size: 23px;
     top: 10px;
 }
-
 /*slider start*/
 .slider-container {
     display: block;
@@ -108,7 +124,7 @@
     background: red;
 }
 /*slider end*/
-
+/*drum start*/
 .drums {
     display: flex;
     flex-direction: column;
@@ -147,7 +163,8 @@
 }
 @keyframes neon {
     0% {border-top: 2px solid red;}
-    25% {border-right: 2px solid rgb(115, 0, 255);}
-    50% {border-bottom: 2px solid rgb(0, 255, 217);}
+    30% {border-right: 2px solid rgb(115, 0, 255);}
+    60% {border-bottom: 2px solid rgb(0, 255, 217);}
     100% {border-left: 2px solid rgb(255, 225, 0)};
 }
+/*drum end*/
