@@ -4,13 +4,22 @@
 }
 
 #drum-machine {
-    background-color: gray;
+    background-color: black;
     position: relative;
     margin: auto ;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+#brand {
+    font-family: Brush Script Std;
+    font-weight: bold;
+    position: absolute;
+    background: -webkit-linear-gradient(70deg, rgb(103, 103, 103) 45%, rgb(212, 209, 209) 47%, #333 55%, rgb(103, 103, 103) 75%);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
 }
 
 /*slider start*/
@@ -66,6 +75,10 @@
         height: 300px;
         top: 100px;
         padding: 20px;
+    }
+    #brand {
+        font-size: 23px;
+        top: 10px;
     }
     .slider-container {
         width: 50px;
