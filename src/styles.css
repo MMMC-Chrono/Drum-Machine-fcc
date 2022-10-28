@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
-    background-color: rgba(182, 178, 183, 0.268)
+}
+
+:root {
+    --gray: rgb(103, 103, 103);
 }
 
 #drum-machine {
@@ -11,128 +14,140 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    width: 350px;
+    height: 300px;
+    top: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 7px ridge var(--gray);
 }
-#brand {
-    font-family: Brush Script Std;
+#logo {
+    font-family: 'Brush Script Std';
     font-weight: bold;
     position: absolute;
-    background: -webkit-linear-gradient(70deg, rgb(103, 103, 103) 45%, rgb(212, 209, 209) 47%, #333 55%, rgb(103, 103, 103) 75%);
+    background: -webkit-linear-gradient(70deg, var(--gray) 45%, rgb(212, 209, 209) 47%, #333 55%, var(--gray) 75%);
     -webkit-background-clip: text;
     background-clip: none;
     -webkit-text-fill-color: transparent;
+
+    font-size: 23px;
+    top: 10px;
 }
 
 /*slider start*/
 .slider-container {
     display: block;
     position: absolute;
+
+    width: 60px;
+    height: 210px;
+    left: 20px;
+    top: 53px;
+}
+#vol-display, #display {
+    position: absolute;
+    font-family: "Saira Stencil One";
+    color: var(--gray);
 }
 #vol-display {
-    background: whitesmoke;
-    position: absolute;
+    height: 30px;
+    width: 100%;
+    padding-top: 4px;
+    font-size: 14px;
 }
 #vol-range {
     transform: rotate(90deg);
     position: absolute;
+
+    width: 170px;
+    left: -55px;
+    top: 126px;
 }
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    background: #d9d9d9;
+    background: whitesmoke;
     width: 100%;
     opacity: 0.7;
     transition: 0.5s;
     -webkit-transition: opacity 0.5s;
+
+    height: 12px;
+    box-shadow: 0px 0px 5px black;
 }
 .slider:hover {
     opacity: 1;
+
+    box-shadow: 0px 0px 3px 1px red;
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background: red;
+    background: var(--gray);
     cursor: pointer;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px ridge black;
 }
 .slider::-moz-range-thumb {
-    background: red;
+    background: var(--gray);
     cursor: pointer;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px ridge black;
+}
+.slider::-webkit-slider-thumb:hover {
+    background: red;
+}
+.slider::-moz-range-thumb:hover {
+    background: red;
 }
 /*slider end*/
-#display {
-    background-color: whitesmoke;
-    position: absolute;
-}
+
 .drums {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-}
+    font-family: 'Saira Stencil One';
 
-@media only screen and (min-width: 400px) and (max-width: 600px) {
-    #drum-machine {
-        width: 350px;
-        height: 300px;
-        top: 100px;
-        padding: 20px;
-    }
-    #brand {
-        font-size: 23px;
-        top: 10px;
-    }
-    .slider-container {
-        width: 50px;
-        height: 210px;
-        left: 40px;
-        top: 53px;
-    }
-    #vol-display {
-        height: 30px;
-        width: 100%;
-        padding-top: 4px;
-    }
-    #vol-range {
-        width: 170px;
-        left: -59px;
-        top: 126px;
-    }
-    .slider {
-        height: 15px;
-        box-shadow: 0px 0px 5px black;
-    }
-    .slider:hover {
-        box-shadow: 0px 0px 3px 1px red;
-    }
-    .slider::-webkit-slider-thumb {
-        width: 20px;
-        height: 20px;
-        border-radius: 3px;
-        border: 1px ridge black;
-    }
-    .slider::-moz-range-thumb {
-        width: 20px;
-        height: 20px;
-        border-radius: 3px;
-        border: 1px ridge black;
-    }
-    #display {
-        width: 100px;
-        height: 20px;
-        margin: 10px;
-        top: 43px;
-        height: 30px;
-        left: 155px;
-        padding-top: 4px;
-    }
-    .drums {
-        padding: 10px;
-        width: 200px;
-        height: 195px;
-        top: 89px;
-        right: 40px;
-    }
-    .drum-pad {
-        width: 50px;
-        height: 50px;
-    }
+    padding: 10px;
+    width: 200px;
+    height: 195px;
+    top: 89px;
+    right: 50px;
+}
+#display {
+    color: rgb(172, 172, 172);
+    width: 150px;
+    height: 15px;
+    margin: 10px;
+    top: 40px;
+    right: 60px;
+    padding-bottom: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: 3px ridge var(--gray);
+    box-shadow: 0px 0px 1px 1px var(--gray);
+}
+.drum-pad {
+    background: var(--gray);
+
+    width: 50px;
+    height: 50px;
+}
+.drum-pad:hover {
+    animation: neon 1s linear infinite;
+    box-shadow: 0px 0px 1px 1px var(--gray);
+}
+@keyframes neon {
+    0% {border-top: 2px solid red;}
+    25% {border-right: 2px solid rgb(115, 0, 255);}
+    50% {border-bottom: 2px solid rgb(0, 255, 217);}
+    100% {border-left: 2px solid rgb(255, 225, 0)};
 }
