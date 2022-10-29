@@ -178,3 +178,12 @@
     100% {border-left: 2px solid rgb(255, 225, 0)};
 }
 /*drum end*/
+footer {
+    color: var(--light-gray);
+    position: relative;
+    bottom: -150px;
+}
+#gmail {
+    color: whitesmoke;
+    cursor: pointer;
+}

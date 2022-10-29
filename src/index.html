@@ -10,6 +10,7 @@
         <link rel="stylesheet" href=
        "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Stencil+One">
+        <script src="https://kit.fontawesome.com/ba7f655f8f.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="background">
@@ -19,10 +20,8 @@
                     <div  id="vol-display"><span id='vol'>Vol </span><span id="volume-output">50</span></div>
                     <input type="range" min="0" max="100" value="50" class="slider" id="vol-range">
                 </div>
-            
                 <div id="display">Display</div>
                 <div class="drums">
-
                     <!--first row-->
                     <div class="row">
                         <div class="col-xs-4">
@@ -30,20 +29,17 @@
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" id='Q' class="clip"></audio>
                             </button>
                         </div>
-
                         <div class="col-xs-4">
                             <button class="drum-pad" id="k-w" onclick="playAudio('W')" type="button">W
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" id="W" class="clip"></audio>
                             </button>
                         </div>
-
                         <div class="col-xs-4">
                             <button class="drum-pad" id="k-e" onclick="playAudio('E')" type="button">E
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" id="E" class="clip"></audio>
                             </button>
                         </div>
                     </div>
-                
                     <!--second row-->
                     <div class="row">
                         <div class="col-xs-4">
@@ -51,20 +47,17 @@
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" id="A" class="clip"><audio>
                             </button>
                         </div>
-
                         <div class="col-xs-4">
                             <button class="drum-pad" id="k-s" onclick="playAudio('S')" type="button">S
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" id="S" class="clip"></audio>
                             </button>
                         </div>
-
                         <div class="col-xs-4">
                             <button class="drum-pad" id="k-d" onclick="playAudio('D')" type="button">D
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" id="D" class="clip"></audio>
                             </button>
                         </div>
                     </div>
-
                     <!--third row-->
                     <div class="row">
                         <div class="col-xs-4">
@@ -72,13 +65,11 @@
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" id="Z" class="clip"><audio>
                             </button>
                         </div>
-
                         <div class="col-xs-4">
                             <button class="drum-pad" id="k-x" onclick="playAudio('X')" type="button">X
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" id="X" class="clip"><audio>
                             </button>
                         </div>
-
                         <div class="col-xs-4">
                             <button class="drum-pad" id="k-c" onclick="playAudio('C')" type="button">C
                                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" id="C" class="clip"></audio>
@@ -87,6 +78,13 @@
                     </div>       
                 </div>
             </div>
+            <footer>
+                <address class="text-center">
+                    <span>created by <em>MayMyaMyaCin</em>.</span><br/>
+                    <span>For freeCodeCamp's Frontend project</span><br/>
+                    <span><i class="fa-solid fa-envelope"></i> <a id="gmail" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqXxQVkcvhvwxQbxwqvMZVBGppnQnHZJGBkTrgFGJRjNHNNSGcDcXpGXZhbskSJZWscRBq" target="_blank">maymyamyacin@gmail.com</a></span>
+                </address>
+            </footer>
         </div>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <script src="index.js"></script>
