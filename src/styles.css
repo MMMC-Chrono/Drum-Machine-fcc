@@ -3,6 +3,7 @@
 }
 :root {
     --gray: rgb(103, 103, 103);
+    --light-gray: rgb(172, 172, 172);
     --neon-blue: rgb(115, 0, 255);
     --neon-mint: rgb(0, 255, 217);
     --neon-yellow: rgb(255, 225, 0);
@@ -27,7 +28,7 @@
     top: 100px;
     padding: 20px;
     border-radius: 5px;
-    border: 7px ridge var(--gray);
+    border: 9px ridge var(--gray);
 }
 #drum-machine:hover {
     animation: shadow 7s linear infinite;
@@ -71,6 +72,7 @@
     width: 100%;
     padding-top: 4px;
     font-size: 14px;
+    border: 1px ridge var(--gray);
 }
 #vol-range {
     transform: rotate(90deg);
@@ -83,7 +85,7 @@
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    background: whitesmoke;
+    background: var(--gray);
     width: 100%;
     opacity: 0.7;
     transition: 0.5s;
@@ -91,11 +93,12 @@
 
     height: 12px;
     box-shadow: 0px 0px 5px black;
+    border: 3px ridge var(--gray);
 }
 .slider:hover {
     opacity: 1;
-
-    box-shadow: 0px 0px 3px 1px red;
+    border: 2px inset red;
+    background: var(--light-gray);
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -139,7 +142,7 @@
     right: 50px;
 }
 #display {
-    color: rgb(172, 172, 172);
+    color: var(--light-gray);
     width: 150px;
     height: 15px;
     margin: 10px;
