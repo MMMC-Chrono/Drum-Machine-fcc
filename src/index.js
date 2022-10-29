@@ -40,3 +40,14 @@ window.document.onkeyup = function(event) {
         null
     )
 }
+
+const volEl = document.querySelectorAll('.clip');
+const vol = document.getElementById('volume-output');
+const sliderEl = document.getElementById('vol-range');
+
+sliderEl.onclick = function() {
+    vol.innerHTML = this.value;
+    for (let i=0; i<volEl.length; i++) {
+        volEl[i].volume = this.value/100;
+    }
+}
