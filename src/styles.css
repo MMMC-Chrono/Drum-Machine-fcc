@@ -70,9 +70,16 @@
 #vol-display {
     height: 30px;
     width: 100%;
-    padding-top: 4px;
     font-size: 14px;
-    border: 1px ridge var(--gray);
+    border: 5px ridge var(--gray);
+}
+#vol {
+    position: absolute;
+    left: 1px;
+}
+#volume-output {
+    color: var(--light-gray);
+    position: absolute;
 }
 #vol-range {
     transform: rotate(90deg);
